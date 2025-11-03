@@ -25,7 +25,7 @@ Visit the portfolio: **[Your GitHub Pages URL will go here]**
 ## 📦 Repository Structure
 
 ```
-law-firm-flowchart/
+digital-design-portfolio/
 ├── docs/                          # GitHub Pages site
 │   ├── index.html                 # Portfolio home page
 │   ├── css/

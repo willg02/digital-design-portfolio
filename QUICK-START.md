@@ -13,7 +13,7 @@
 ## File Structure
 
 ```
-law-firm-flowchart/
+digital-design-portfolio/
 ├── docs/                              # Your live website
 │   ├── index.html                     # Portfolio home page
 │   ├── css/

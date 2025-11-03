@@ -16,7 +16,7 @@ This guide will help you publish your portfolio to GitHub Pages.
 Open a terminal in the project folder and run:
 
 ```powershell
-cd "c:\Users\jendg\OneDrive\Documents\Digital Design Projects\law-firm-flowchart"
+cd "c:\Users\jendg\OneDrive\Documents\Digital Design Projects\digital-design-portfolio"
 git init
 git add .
 git commit -m "Initial commit: Portfolio with estate planning flowchart"
@@ -28,7 +28,7 @@ git commit -m "Initial commit: Portfolio with estate planning flowchart"
 
 ### Option A: Using GitHub CLI (if installed)
 ```powershell
-gh repo create law-firm-flowchart --public --source=. --remote=origin
+gh repo create digital-design-portfolio --public --source=. --remote=origin
 git push -u origin main
 ```
 
@@ -36,7 +36,7 @@ git push -u origin main
 
 1. Go to [github.com/new](https://github.com/new)
 2. Fill in:
-   - **Repository name:** `law-firm-flowchart`
+   - **Repository name:** `digital-design-portfolio`
    - **Description:** "Frame & Function Portfolio - Digital design projects"
    - **Visibility:** Public (required for free GitHub Pages)
    - **DO NOT** initialize with README, .gitignore, or license (we already have these)
@@ -44,7 +44,7 @@ git push -u origin main
 4. Copy the commands shown and run them in your terminal:
 
 ```powershell
-git remote add origin https://github.com/YOUR-USERNAME/law-firm-flowchart.git
+git remote add origin https://github.com/YOUR-USERNAME/digital-design-portfolio.git
 git branch -M main
 git push -u origin main
 ```
@@ -63,7 +63,7 @@ Replace `YOUR-USERNAME` with your actual GitHub username.
    - Folder: `/docs`
 5. Click **Save**
 6. Wait 1-2 minutes for the site to build
-7. Your site will be live at: `https://YOUR-USERNAME.github.io/law-firm-flowchart/`
+7. Your site will be live at: `https://YOUR-USERNAME.github.io/digital-design-portfolio/`
 
 ---
 
