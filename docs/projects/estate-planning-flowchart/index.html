@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estate Planning Process Flowchart - Professional law firm workflow diagram">
+    <title>Estate Planning Flowchart | Frame & Function</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'base' });
+    </script>
+    <style>
+        .project-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+        
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .diagram-container {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .info-box h3 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .legend-section {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .legend-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .legend-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 0.375rem;
+            border: 2px solid #333;
+        }
+        
+        .color-client { background: #90EE90; }
+        .color-meeting { background: #87CEEB; }
+        .color-premium { background: #FFB6C1; }
+        .color-standard { background: #FFF; }
+    </style>
+</head>
+<body>
+    <div class="project-header">
+        <div class="container">
+            <h1>Estate Planning Process Flowchart</h1>
+            <p class="tagline">A modern, process-driven workflow visualization for law firm client services</p>
+            <div class="project-meta">
+                <div class="project-meta-item">
+                    <strong>Tech:</strong> Mermaid.js, HTML5, CSS3
+                </div>
+                <div class="project-meta-item">
+                    <strong>Use Case:</strong> Law Firm Workflows, WordPress Integration
+                </div>
+                <div class="project-meta-item">
+                    <strong>Year:</strong> 2025
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+
+        <section>
+            <h2>Project Overview</h2>
+            <p class="lead">
+                This flowchart redesigns a complex 21-step estate planning process into a clean, 
+                linear workflow with clear visual hierarchy and color-coded stages.
+            </p>
+            <p>
+                The original design was confusing with non-linear flow and unclear progression. 
+                This redesign features:
+            </p>
+            <ul>
+                <li>✅ Top-to-bottom logical flow for easy comprehension</li>
+                <li>✅ Three distinct stages: Onboarding, Document Prep, and Premium Services</li>
+                <li>✅ Color-coded steps showing client actions, meetings, and premium services</li>
+                <li>✅ Compact design optimized for web viewing (fits on one page)</li>
+                <li>✅ WordPress-ready with Mermaid plugin compatibility</li>
+                <li>✅ Fully version-controllable text-based diagram</li>
+            </ul>
+        </section>
+
+        <section class="legend-section">
+            <h3>📋 Color Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color color-client"></div>
+                    <span><strong>Green:</strong> Client Action</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-meeting"></div>
+                    <span><strong>Blue:</strong> In-Office Meeting</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-premium"></div>
+                    <span><strong>Pink:</strong> Premium Service*</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-standard"></div>
+                    <span><strong>White:</strong> Standard Step</span>
+                </div>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.875rem; color: #6b7280;">
+                * Premium services are not included in the Lite Level package
+            </p>
+        </section>
+
+        <section>
+            <h2>The Flowchart</h2>
+            <div class="diagram-container">
+                <div class="mermaid">
+%%{init: {'theme':'base', 'themeVariables': {'fontSize':'14px'}}}%%
+flowchart LR
+    %% COLOR STYLES
+    classDef clientAction fill:#90EE90,stroke:#333,stroke-width:2px,color:#000
+    classDef meeting fill:#87CEEB,stroke:#333,stroke-width:2px,color:#000
+    classDef premium fill:#FFB6C1,stroke:#333,stroke-width:2px,color:#000
+    classDef standard fill:#FFF,stroke:#333,stroke-width:2px,color:#000
+    classDef legendBox fill:#F5F5F5,stroke:#666,stroke-width:1px,color:#333
+
+    %% LEGEND
+    subgraph Legend[" "]
+        direction TB
+        LegendTitle["<b>📋 LEGEND</b>"]:::legendBox
+        L1["Client Action"]:::clientAction
+        L2["In-Office Meeting"]:::meeting
+        L3["Premium Service*"]:::premium
+        L4["Standard Step"]:::standard
+        LegendTitle ~~~ L1 ~~~ L2 ~~~ L3 ~~~ L4
+    end
+
+    %% STAGE 1: ONBOARDING
+    subgraph Stage1[" "]
+        direction TB
+        Stage1Title["<b>⭐ STAGE 1: Client Onboarding</b>"]:::legendBox
+        S1["<b>1. Initial Client Contact</b><br/><small>You reach out to begin<br/>the estate planning process</small>"]:::clientAction
+        S2["<b>2. Schedule Session</b><br/><small>Family Wealth Planning<br/>Session™ scheduled</small>"]:::standard
+        S3["<b>3. Send Welcome Packet</b><br/><small>Pre-meeting packet &<br/>questionnaire sent</small>"]:::standard
+        S4["<b>4. Client Confirms</b><br/><small>Confirm receipt &<br/>answer questions</small>"]:::standard
+        S5["<b>5. Return Intake Forms</b><br/><small>Complete & return in<br/>postage-paid envelope</small>"]:::clientAction
+        S6["<b>6. Planning Meeting</b><br/><small>Diagnose needs, design plan,<br/>sign engagement agreement</small>"]:::meeting
+        Stage1Title ~~~ S1 --> S2 --> S3 --> S4 --> S5 --> S6
+    end
+
+    %% STAGE 2: DOCUMENT PREP
+    subgraph Stage2[" "]
+        direction TB
+        Stage2Title["<b>📄 STAGE 2: Document Preparation</b>"]:::legendBox
+        S7["<b>7. Attorney Follow-Up</b><br/><small>Personal call to<br/>address questions</small>"]:::standard
+        S8["<b>8. Send Confirmation</b><br/><small>Confirmation of Important<br/>Information document</small>"]:::standard
+        S9["<b>9. Client Approval</b><br/><small>Review & approve or<br/>provide corrections</small>"]:::clientAction
+        S10["<b>10. Draft Documents</b><br/><small>Attorney creates first<br/>draft of estate plan</small>"]:::standard
+        S11["<b>11. Fly-Speck Review</b><br/><small>Thorough review for<br/>errors & accuracy</small>"]:::standard
+        S12["<b>12. Print & Collate</b><br/><small>Final draft printed<br/>& prepared</small>"]:::standard
+        S13["<b>13. Signing Meeting</b><br/><small>Review & sign legal docs,<br/>witnessed & notarized</small>"]:::meeting
+        Stage2Title ~~~ S7 --> S8 --> S9 --> S10 --> S11 --> S12 --> S13
+    end
+
+    %% STAGE 3: FINALIZATION
+    subgraph Stage3[" "]
+        direction TB
+        Stage3Title["<b>✨ STAGE 3: Premium Services & Aftercare</b>"]:::legendBox
+        S14["<b>14. Executor Letters*</b><br/><small>Letters to executors &<br/>trustees explaining roles</small>"]:::premium
+        S15["<b>15. Trust Funding Docs*</b><br/><small>Deeds, DMV forms, transfer<br/>letters & asset spreadsheet</small>"]:::premium
+        S16["<b>16. Digital Scanning*</b><br/><small>PDF creation, document CD<br/>& digital file storage</small>"]:::premium
+        S17["<b>17. Ancillary Docs</b><br/><small>Owner's manual, toolkit,<br/>locator & glossary</small>"]:::standard
+        S18["<b>18. Assemble Binder</b><br/><small>Complete estate planning<br/>binder prepared</small>"]:::standard
+        S19["<b>19. Final Meeting</b><br/><small>Present binder, review plans,<br/>family legacy interview</small>"]:::meeting
+        S20["<b>20. Monthly Follow-Up*</b><br/><small>Trust funding verification<br/>& follow-up process</small>"]:::premium
+        S21["<b>21. Tri-Annual Check-Ups</b><br/><small>Complimentary check-ups<br/>for life</small>"]:::standard
+        Stage3Title ~~~ S14 --> S15 --> S16 --> S17 --> S18 --> S19 --> S20 --> S21
+    end
+
+    %% CONNECT STAGES
+    Legend -.-> Stage1
+    Stage1 ==> Stage2 ==> Stage3
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="info-box">
+                <h3>💡 WordPress Integration</h3>
+                <p><strong>To use this flowchart on your WordPress site:</strong></p>
+                <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li>Install a Mermaid plugin like <strong>"WP Mermaid"</strong> or <strong>"Embed Mermaid Charts"</strong></li>
+                    <li>Copy the Mermaid code from the <code>flowchart.mmd</code> file</li>
+                    <li>Paste it into a Mermaid block or shortcode on your page/post</li>
+                    <li>The diagram will render automatically with full interactivity</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2>Design Process</h2>
+            <h3>Problem</h3>
+            <p>
+                The original flowchart was difficult to follow with a non-linear layout that required 
+                readers to jump between different areas of the page. Steps were numbered but the 
+                visual flow contradicted the logical sequence.
+            </p>
+
+            <h3 style="margin-top: 2rem;">Solution</h3>
+            <p>
+                Redesigned using Mermaid.js for a clean, maintainable diagram that:
+            </p>
+            <ul>
+                <li>Flows horizontally in three clear stages</li>
+                <li>Uses color coding to show different types of steps</li>
+                <li>Includes descriptive text for each step</li>
+                <li>Maintains all original information in a more compact format</li>
+                <li>Can be easily updated via text edits (version control friendly)</li>
+            </ul>
+
+            <h3 style="margin-top: 2rem;">Technology Choice</h3>
+            <p>
+                <strong>Why Mermaid.js?</strong>
+            </p>
+            <ul>
+                <li>Text-based diagrams that integrate with version control</li>
+                <li>AI can easily help modify and update diagrams</li>
+                <li>Clean, professional rendering</li>
+                <li>WordPress plugin support for easy CMS integration</li>
+                <li>Responsive and accessible output</li>
+                <li>No need for expensive design software subscriptions</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Source Files</h2>
+            <p>
+                View the complete source code and Mermaid diagram file on GitHub:
+            </p>
+            <a href="https://github.com/yourusername/law-firm-flowchart" class="btn-primary" target="_blank">
+                View on GitHub →
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Frame & Function. Built with ❤️ and AI assistance in VS Code.</p>
+            <p class="footer-links">
+                <a href="../../index.html">Back to Portfolio</a> |
+                <a href="https://github.com/yourusername/law-firm-flowchart" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
