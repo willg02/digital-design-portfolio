@@ -14,6 +14,12 @@ A redesigned, professional flowchart for law firm fee schedules and client workf
 **Tech Stack:** Mermaid.js, HTML5, CSS3  
 **View Live:** [Estate Planning Flowchart](./docs/projects/estate-planning-flowchart/index.html)
 
+### 2. [Interactive Pricing Calculator](./docs/projects/pricing-calculator/)
+Real-time service pricing tool with dynamic calculations, professional quote generation, and payment plan options. Perfect for agencies, consultants, and service businesses.
+
+**Tech Stack:** JavaScript, HTML5, CSS3  
+**View Live:** [Pricing Calculator](./docs/projects/pricing-calculator/index.html)
+
 ---
 
 ## 🚀 Live Site

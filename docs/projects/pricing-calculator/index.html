@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Service Pricing Calculator - Real-time project cost estimator">
+    <title>Service Pricing Calculator | Frame & Function</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="project-header calculator-header">
+        <div class="container">
+            <h1>Interactive Pricing Calculator</h1>
+            <p class="tagline">Real-time service cost estimation tool</p>
+            <div class="project-meta">
+                <div class="project-meta-item">
+                    <strong>Tech:</strong> HTML5, CSS3, JavaScript
+                </div>
+                <div class="project-meta-item">
+                    <strong>Use Case:</strong> Service Businesses, Agencies, Consultants
+                </div>
+                <div class="project-meta-item">
+                    <strong>Year:</strong> 2025
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+
+        <section>
+            <h2>Live Calculator Demo</h2>
+            <p class="lead">
+                An interactive pricing tool that helps clients understand project costs in real-time.
+                Perfect for service businesses, agencies, and consultants.
+            </p>
+        </section>
+
+        <div class="calculator-wrapper">
+            <!-- Left Side: Calculator Form -->
+            <div class="calculator-panel">
+                <h3>📊 Configure Your Project</h3>
+                
+                <!-- Service Type -->
+                <div class="input-group">
+                    <label for="serviceType">Service Type</label>
+                    <select id="serviceType" class="form-control">
+                        <option value="web-design" data-base="2500">Website Design</option>
+                        <option value="branding" data-base="3500">Brand Identity</option>
+                        <option value="ui-ux" data-base="4000">UI/UX Design</option>
+                        <option value="marketing" data-base="2000">Marketing Materials</option>
+                        <option value="consultation" data-base="1500">Design Consultation</option>
+                    </select>
+                </div>
+
+                <!-- Project Scope -->
+                <div class="input-group">
+                    <label for="projectScope">
+                        Project Scope
+                        <span class="value-display" id="scopeValue">Medium</span>
+                    </label>
+                    <input type="range" id="projectScope" min="1" max="3" value="2" step="1" class="slider">
+                    <div class="slider-labels">
+                        <span>Small</span>
+                        <span>Medium</span>
+                        <span>Large</span>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="input-group">
+                    <label for="timeline">
+                        Timeline (weeks)
+                        <span class="value-display" id="timelineValue">4 weeks</span>
+                    </label>
+                    <input type="range" id="timeline" min="1" max="12" value="4" step="1" class="slider">
+                    <div class="slider-labels">
+                        <span>1 week</span>
+                        <span>12 weeks</span>
+                    </div>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="input-group">
+                    <label>Additional Services</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="revisions" data-price="500">
+                            <span>Extra Revisions (+$500)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rush" data-price="750">
+                            <span>Rush Delivery (+$750)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="support" data-price="400">
+                            <span>30-Day Support (+$400)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="training" data-price="600">
+                            <span>Client Training (+$600)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="source" data-price="300">
+                            <span>Source Files (+$300)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Price Display -->
+            <div class="price-panel">
+                <div class="price-card">
+                    <h3>💰 Your Estimate</h3>
+                    
+                    <div class="price-breakdown">
+                        <div class="breakdown-item">
+                            <span>Base Service:</span>
+                            <span id="basePrice">$2,500</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Scope Multiplier:</span>
+                            <span id="scopeMultiplier">1.0x</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Timeline Adjustment:</span>
+                            <span id="timelineAdjust">$0</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Add-ons:</span>
+                            <span id="addonsTotal">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="total-price">
+                        <div class="price-label">Total Investment</div>
+                        <div class="price-amount" id="totalPrice">$2,500</div>
+                        <div class="price-note">One-time project fee</div>
+                    </div>
+
+                    <button class="btn-generate-quote" id="generateQuote">
+                        📄 Generate Quote
+                    </button>
+
+                    <div class="payment-options">
+                        <h4>Payment Plan Options:</h4>
+                        <div class="payment-option">
+                            <strong>50/50 Split:</strong>
+                            <span id="split50">$1,250</span> upfront, <span id="split50b">$1,250</span> on completion
+                        </div>
+                        <div class="payment-option">
+                            <strong>Monthly (3mo):</strong>
+                            <span id="monthly3">$833</span> per month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-note">
+                    <strong>💡 Pro Tip:</strong> This calculator is fully customizable and can be adapted 
+                    for any service-based business. Perfect for embedding on client websites!
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Modal -->
+        <div id="quoteModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="quoteContent">
+                    <div class="quote-header">
+                        <h2>Professional Quote</h2>
+                        <p class="quote-date" id="quoteDate"></p>
+                    </div>
+                    <div class="quote-body">
+                        <h3>Project Details</h3>
+                        <table class="quote-table">
+                            <tr>
+                                <td><strong>Service Type:</strong></td>
+                                <td id="quoteService"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Project Scope:</strong></td>
+                                <td id="quoteScope"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Timeline:</strong></td>
+                                <td id="quoteTimeline"></td>
+                            </tr>
+                        </table>
+
+                        <h3>Cost Breakdown</h3>
+                        <table class="quote-table">
+                            <tbody id="quoteBreakdown"></tbody>
+                            <tfoot>
+                                <tr class="quote-total">
+                                    <td><strong>Total Investment:</strong></td>
+                                    <td><strong id="quoteTotal"></strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <div class="quote-footer">
+                            <p><strong>Valid for 30 days</strong></p>
+                            <p>Frame & Function | Digital Design Studio</p>
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="window.print()">🖨️ Print Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <h2>Project Overview</h2>
+            <p class="lead">
+                An interactive pricing calculator that demonstrates real-time calculation, 
+                user interaction, and practical business application.
+            </p>
+
+            <h3>Features</h3>
+            <ul>
+                <li>✅ Real-time price updates as users adjust inputs</li>
+                <li>✅ Multiple service types with different base prices</li>
+                <li>✅ Scope and timeline sliders with visual feedback</li>
+                <li>✅ Checkbox options for add-on services</li>
+                <li>✅ Detailed price breakdown</li>
+                <li>✅ Payment plan calculator</li>
+                <li>✅ Professional quote generation</li>
+                <li>✅ Print-friendly quote format</li>
+                <li>✅ Fully responsive design</li>
+                <li>✅ Smooth animations and transitions</li>
+            </ul>
+
+            <h3>Use Cases</h3>
+            <ul>
+                <li>Design agencies and studios</li>
+                <li>Consulting firms</li>
+                <li>Legal services</li>
+                <li>Marketing agencies</li>
+                <li>Development shops</li>
+                <li>Any service-based business</li>
+            </ul>
+
+            <h3>Technical Highlights</h3>
+            <ul>
+                <li>Pure vanilla JavaScript - no frameworks needed</li>
+                <li>Event-driven architecture for instant updates</li>
+                <li>Modular calculation system</li>
+                <li>Accessible form controls</li>
+                <li>Mobile-responsive layout</li>
+                <li>Print stylesheet for quote generation</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Source Code</h2>
+            <p>
+                View the complete source code on GitHub:
+            </p>
+            <a href="https://github.com/willg02/digital-design-portfolio" class="btn-primary" target="_blank">
+                View on GitHub →
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Frame & Function. Built with ❤️ and AI assistance in VS Code.</p>
+            <p class="footer-links">
+                <a href="../../index.html">Back to Portfolio</a> |
+                <a href="https://github.com/willg02/digital-design-portfolio" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
