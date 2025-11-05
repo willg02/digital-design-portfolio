@@ -20,6 +20,12 @@ Real-time service pricing tool with dynamic calculations, professional quote gen
 **Tech Stack:** JavaScript, HTML5, CSS3  
 **View Live:** [Pricing Calculator](./docs/projects/pricing-calculator/index.html)
 
+### 3. [Vue 3 Product Catalog](./docs/projects/product-catalog/)
+Interactive product showcase built with Vue 3 CDN. Features real-time filtering, search, sorting, grid/list views, shopping cart functionality, and smooth transitions. Demonstrates reactive state management and component architecture.
+
+**Tech Stack:** Vue 3, JavaScript, CSS3  
+**View Live:** [Product Catalog](./docs/projects/product-catalog/index.html)
+
 ---
 
 ## 🚀 Live Site
